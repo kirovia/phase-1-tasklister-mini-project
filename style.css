@@ -45,3 +45,7 @@ img {
   left: 45%;
   bottom: 2rem;
 }
+
+button {
+  color: red;
+}
