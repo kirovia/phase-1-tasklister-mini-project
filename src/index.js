@@ -17,7 +17,19 @@ form.addEventListener('submit', (e) => {
   newX.textContent = 'X';
   newItem.textContent = `${input.value}  `;
   newItem.style.color = colors.value;
-  list.append(newItem);
   newItem.append(newX);
+
+  switch (colors.value) {
+    case 'red':
+      list.prepend(newItem);
+      break;
+    case 'green':
+      list.append(newItem);
+      break;
+    default:
+      alert('error');
+      break;
+  }
+
   newX.addEventListener('click', () => newItem.remove());
 })
